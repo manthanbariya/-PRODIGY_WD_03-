@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color:rgb(10, 10, 10);
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.background img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 110px;
+    background-color: #caf1f5;
+    font-size: 3em;
+    cursor: pointer;
+    border: 1px solid #0b0b0b;
+    
+}
+.cell:hover {
+    background-color: #16f705;
+}
+
+#reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.cell.winner {
+    background-color: #90ee90;
+}
